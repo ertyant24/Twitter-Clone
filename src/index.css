@@ -4,14 +4,33 @@ body {
 }
 
 .logo {
-    width: 40px;
-    height: 44px;
-    padding: 8px 8px;
+    width: 46px;
+    height: 48px;
+    padding: 10px 8px;
     border-radius: 30px;
+}
+
+.active i {
+    color: #27a3c9;
+}
+.active div {
+    font-weight: 600;
+}
+.active path {
+    fill: #27a3c9;
 }
 
 .home {
     padding: 10px 10px;
+}
+
+.home-1 {
+    padding: 8px 8px;
+}
+
+.home-1:hover {
+    background-color: #1a1a1a;
+    border-radius: 20px;
 }
 
 .home:hover {
