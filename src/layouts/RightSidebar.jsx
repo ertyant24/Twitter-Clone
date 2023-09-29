@@ -3,7 +3,7 @@ import React from 'react'
 function RightSidebar() {
   return (
     <>
-      <aside className='me-3 pt-3' style={{width: "350px"}}>
+      <aside className='me-3 pt-2' style={{width: "350px"}}>
         RightSidebar
       </aside>
     </>

@@ -10,6 +10,15 @@ body {
     border-radius: 30px;
 }
 
+.home {
+    padding: 10px 10px;
+}
+
+.home:hover {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+}
+
 .logo:hover {
     background-color: #1a1a1a;
 }
