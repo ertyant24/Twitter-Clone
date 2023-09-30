@@ -1,3 +1,7 @@
+html {
+    font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
 body {
     background-color: black;
     color: aliceblue;
@@ -22,6 +26,38 @@ body {
 
 .home {
     padding: 10px 10px;
+    position: relative;
+}
+
+.notifications {
+    font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    width: 15px;
+    height: 15px;
+    background-color: #0688af;
+    position: absolute;
+    top: 9px;
+    right: 124px;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.9px;
+}
+.isaret {
+    width: 7px;
+    height: 7px;
+    background-color: #0688af;
+    position: absolute;
+    top: 12px;
+    right: 116px;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1px;
+    padding-bottom: 2px;
 }
 
 .home-1 {
