@@ -7,13 +7,17 @@ import Collapse from 'react-bootstrap/Collapse';
 
 
 export default function More() {
-    const [item, setItem] = useState("");
+    const [isArrowUp, setIsArrowUp] = useState(false);
 
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
     const [open3, setOpen3] = useState(false);
 
     const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const toggleArrow = () => {
+        setIsArrowUp((prev) => !prev);
+    };
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -59,12 +63,19 @@ export default function More() {
                             aria-controls="example-collapse-text"
                             aria-expanded={open}
                             className='text-white fw-bold collapses'
-                            style={{ fontSize: "14px", position: "relative", top: "-8px" }}
+                            style={{ fontSize: "14px", position: "relative", top: "-8px", }}
                         >
-                            İçerik Üreticisi Stüdyosu
+                            <div className='d-flex justify-content-between' onClick={() => { toggleArrow(0) }} style={{ width: "270px", position: "relative", right: "" }}>
+                                İçerik Üreticisi Stüdyosu
+                                {isArrowUp ? (
+                                    <i className="fa-solid fa-chevron-down ms-5 ps-5"></i>
+                                ) : (
+                                    <i className="fa-solid fa-chevron-up ms-5 ps-5"></i>
+                                )}
+                            </div>
                         </ButtonB>
                         <Collapse in={open1}>
-                            <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "120px", height: "24px", cursor: "pointer" }}>
+                            <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                 <i className="fa-solid fa-signal me-2"></i>İstatistikler
                             </div>
                         </Collapse>
@@ -78,10 +89,19 @@ export default function More() {
                             className='text-white fw-bold collapses'
                             style={{ fontSize: "14px", position: "relative", top: "-8px" }}
                         >
-                            Profosyonel Araçlar
+                            <div className='d-flex justify-content-between' onClick={() => { toggleArrow(0) }} style={{ width: "270px", position: "relative", right: "px" }}>
+                                <span>
+                                    Profosyonel Araçlar
+                                </span>
+                                {isArrowUp ? (
+                                    <i style={{ marginLeft: "94px" }} className="fa-solid fa-chevron-down"></i>
+                                ) : (
+                                    <i style={{ marginLeft: "94px" }} className="fa-solid fa-chevron-up"></i>
+                                )}
+                            </div>
                         </ButtonB>
                         <Collapse in={open2}>
-                            <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "120px", height: "24px", cursor: "pointer" }}>
+                            <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                 <i className="fa-solid fa-arrow-up-right-from-square me-2"></i>Reklamlar
                             </div>
                         </Collapse>
@@ -95,25 +115,32 @@ export default function More() {
                             className='text-white fw-bold collapses'
                             style={{ fontSize: "14px", position: "relative", top: "-8px" }}
                         >
-                            Ayarlar ve Destek
+                            <div className='d-flex justify-content-between' onClick={() => { toggleArrow(0) }} style={{ width: "270px", position: "relative", right: "" }}>
+                                Ayarlar ve Destek
+                                {isArrowUp ? (
+                                    <i className="fa-solid fa-chevron-down ms-5 ps-5"></i>
+                                ) : (
+                                    <i className="fa-solid fa-chevron-up ms-5 ps-5"></i>
+                                )}
+                            </div>
                         </ButtonB>
                         <Collapse in={open3}>
-                            <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "150px", height: "24px", cursor: "pointer" }}>
+                            <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                 <i className="fa-solid fa-gear me-2"></i>Ayarlar ve Gizlilik
                             </div>
                         </Collapse>
                         <Collapse in={open3}>
-                            <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "150px", height: "24px", cursor: "pointer" }}>
+                            <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                 <i className="fa-solid fa-gear me-2"></i>Yardım Merkezi
                             </div>
                         </Collapse>
                         <Collapse in={open3}>
-                            <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "120px", height: "24px", cursor: "pointer" }}>
+                            <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                 <i className="fa-solid fa-pen-to-square me-2"></i>Görünüm
                             </div>
                         </Collapse>
                         <Collapse in={open3}>
-                            <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "150px", height: "24px", cursor: "pointer" }}>
+                            <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                 <i className="fa-solid fa-keyboard me-2"></i>Klavye Kısayolları
                             </div>
                         </Collapse>

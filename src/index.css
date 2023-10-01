@@ -36,7 +36,7 @@ body {
 }
 .home-4:hover {
     background-color: #1a1a1a;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -95,7 +95,7 @@ body {
 
 .collapses:hover {
     background-color: #1a1a1a;
-    border-radius: 20px;
+    border-radius: 6px;
 }
 /*
 
