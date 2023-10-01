@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button';
+import MoreInfo from '../components/MoreInfo';
+import Logo from '../logo/Logo';
 
 function Menu() {
 
@@ -14,8 +16,11 @@ function Menu() {
 
     return (
         <>
-            <nav className='mt-1' style={{ fontSize: "20px" }}>
-                <ul className='navbar' style={{ listStyle: "none" }}>
+            <nav className='mt-1 ' style={{ fontSize: "20px" }}>
+                <ul className='' style={{ listStyle: "none" }}>
+                    <div className='pb-1'>
+                        <Logo/>
+                    </div>
                     <li className={`nav-item ${item === 0 ? "active" : ""}`} onClick={() => { active(0) }}>
                         <Link to="/" className="nav-link" href="#">
                             <div className='home' style={{ width: "150px" }}>
@@ -71,15 +76,14 @@ function Menu() {
                         </Link>
                     </li>
                     <li className={`nav-item ${item === 7 ? "active" : ""}`} onClick={() => { active(7) }}>
-                        <Link className="nav-link" >
-                            <div className='home' style={{ width: "160px" }}>
-                                <i className="fa-solid fa-circle-plus me-3"></i>Daha fazla
-                            </div>
-                        </Link>
+
+                        <MoreInfo />
+                        {/* <i className="fa-solid fa-circle-plus me-3"></i>Daha fazla */}
+
                     </li>
                     <li className="nav-item mt-3 d-grid">
                         <div className=''>
-                            <Button size="large"/>
+                            <Button size="large" name="Gönder" />
                             {/* <Link className="btn btn-info rounded-pill" style={{ height: "46px", width: "235px" }}>
                                 <span className='align-middle fw-bold fs-5'>Gönder</span>
                             </Link> */}
