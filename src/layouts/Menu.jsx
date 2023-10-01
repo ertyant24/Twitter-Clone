@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Button from '../components/Button';
 import MoreInfo from '../components/MoreInfo';
 import Logo from '../logo/Logo';
+import More from '../components/More';
 
 function Menu() {
 
@@ -77,7 +78,7 @@ function Menu() {
                     </li>
                     <li className={`nav-item ${item === 7 ? "active" : ""}`} onClick={() => { active(7) }}>
 
-                        <MoreInfo />
+                        <More />
                         {/* <i className="fa-solid fa-circle-plus me-3"></i>Daha fazla */}
 
                     </li>

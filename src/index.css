@@ -27,6 +27,17 @@ body {
 .home {
     padding: 10px 10px;
     position: relative;
+    font-size: 20px;
+}
+.home-4 {
+    padding: 10px 10px;
+    position: relative;
+    font-size: 16px;
+}
+.home-4:hover {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .notifications {
@@ -80,6 +91,11 @@ body {
 
 .logo:hover {
     background-color: #1a1a1a;
+}
+
+.collapses:hover {
+    background-color: #1a1a1a;
+    border-radius: 20px;
 }
 /*
 
