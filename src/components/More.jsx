@@ -58,13 +58,13 @@ export default function More() {
                         display: 'flex',
                         flexWrap: 'wrap',
                         '& > :not(style)': {
-                            m: 0.5,
+                            m: 0.3,
                             width: 312,
                             height: 270,
                         },
                     }}
                 >
-                    <Paper className='bg-dark text-white' style={{overflow: "auto", borderRadius: "10px"}} elevation={8}>
+                    <Paper className='bg-dark text-white' style={{overflow: "auto", borderRadius: "6px"}} elevation={6}>
                         <div className=''>
                             <div className='home-4'>
                                 <i className="fa-solid fa-at me-4"></i>Bağlan
@@ -91,7 +91,7 @@ export default function More() {
                                     </div>
                                 </ButtonB>
                                 <Collapse in={open1}>
-                                    <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
+                                    <div className='collapses mt-1' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                         <i className="fa-solid fa-signal me-2"></i>İstatistikler
                                     </div>
                                 </Collapse>
@@ -117,7 +117,7 @@ export default function More() {
                                     </div>
                                 </ButtonB>
                                 <Collapse in={open2}>
-                                    <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
+                                    <div className='collapses mt-1' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                         <i className="fa-solid fa-arrow-up-right-from-square me-2"></i>Reklamlar
                                     </div>
                                 </Collapse>
@@ -141,22 +141,22 @@ export default function More() {
                                     </div>
                                 </ButtonB>
                                 <Collapse in={open3}>
-                                    <div className='collapses' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
+                                    <div className='collapses mt-1' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                         <i className="fa-solid fa-gear me-2"></i>Ayarlar ve Gizlilik
                                     </div>
                                 </Collapse>
                                 <Collapse in={open3}>
-                                    <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
+                                    <div className='collapses mt-3' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                         <i className="fa-solid fa-gear me-2"></i>Yardım Merkezi
                                     </div>
                                 </Collapse>
                                 <Collapse in={open3}>
-                                    <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
+                                    <div className='collapses mt-3' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                         <i className="fa-solid fa-pen-to-square me-2"></i>Görünüm
                                     </div>
                                 </Collapse>
                                 <Collapse in={open3}>
-                                    <div className='collapses mt-2' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
+                                    <div className='collapses mt-3' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                         <i className="fa-solid fa-keyboard me-2"></i>Klavye Kısayolları
                                     </div>
                                 </Collapse>
