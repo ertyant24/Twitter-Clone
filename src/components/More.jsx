@@ -10,7 +10,9 @@ import Paper from '@mui/material/Paper';
 
 
 export default function More() {
-    const [isArrowUp, setIsArrowUp] = useState(false);
+    const [arrowDirection1, setArrowDirection1] = useState('down');
+    const [arrowDirection2, setArrowDirection2] = useState('down');
+    const [arrowDirection3, setArrowDirection3] = useState('down');
 
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
@@ -18,8 +20,17 @@ export default function More() {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
-    const toggleArrow = () => {
-        setIsArrowUp((prev) => !prev);
+    const toggleOpen1 = () => {
+        setOpen1(!open1);
+        setArrowDirection1(open1 ? 'down' : 'up text-info');
+    };
+    const toggleOpen2 = () => {
+        setOpen2(!open2);
+        setArrowDirection2(open2 ? 'down' : 'up text-info');
+    };
+    const toggleOpen3 = () => {
+        setOpen3(!open3);
+        setArrowDirection3(open3 ? 'down' : 'up text-info');
     };
 
     const handleClick = (event) => {
@@ -53,23 +64,24 @@ export default function More() {
                 }}
             >
                 <Box
-                    style={{backgroundColor: "gray"}}
+                    style={{ backgroundColor: "white" }}
                     sx={{
                         display: 'flex',
                         flexWrap: 'wrap',
                         '& > :not(style)': {
-                            m: 0.3,
+                            m: 0.2,
                             width: 312,
-                            height: 270,
+                            minHeight: 275,
+                            borderRadius: 1,
                         },
                     }}
                 >
-                    <Paper className='bg-dark text-white' style={{overflow: "auto", borderRadius: "6px"}} elevation={6}>
+                    <Paper className='text-white' style={{ overflowY: "auto", overscrollBehaviorY: "", backgroundColor: "black", boxShadow: "1px 1px 6px black" }} elevation={9}>
                         <div className=''>
-                            <div className='home-4'>
+                            <div className='home-4 ms-2'>
                                 <i className="fa-solid fa-at me-4"></i>Bağlan
                             </div>
-                            <div className='home-4'>
+                            <div className='home-4 ms-2'>
                                 <i class="fa-solid fa-money-bills me-4"></i>Para kazanma
                             </div><hr />
                             <div className="">
@@ -81,13 +93,9 @@ export default function More() {
                                     className='text-white fw-bold collapses'
                                     style={{ fontSize: "14px", position: "relative", top: "-8px", }}
                                 >
-                                    <div className='d-flex justify-content-between' onClick={() => { toggleArrow(0) }} style={{ width: "270px", position: "relative", right: "" }}>
+                                    <div className='d-flex justify-content-between' onClick={() => { toggleOpen1() }} style={{ width: "270px", position: "relative", right: "" }}>
                                         İçerik Üreticisi Stüdyosu
-                                        {isArrowUp ? (
-                                            <i className="fa-solid fa-chevron-down ms-5 ps-5"></i>
-                                        ) : (
-                                            <i className="fa-solid fa-chevron-up ms-5 ps-5"></i>
-                                        )}
+                                        <i className={`fa-solid fa-chevron-${arrowDirection1} ms-5 ps-5`}></i>
                                     </div>
                                 </ButtonB>
                                 <Collapse in={open1}>
@@ -105,15 +113,9 @@ export default function More() {
                                     className='text-white fw-bold collapses'
                                     style={{ fontSize: "14px", position: "relative", top: "-8px" }}
                                 >
-                                    <div className='d-flex justify-content-between' onClick={() => { toggleArrow(0) }} style={{ width: "270px", position: "relative", right: "px" }}>
-                                        <span>
-                                            Profosyonel Araçlar
-                                        </span>
-                                        {isArrowUp ? (
-                                            <i style={{ marginLeft: "94px" }} className="fa-solid fa-chevron-down"></i>
-                                        ) : (
-                                            <i style={{ marginLeft: "94px" }} className="fa-solid fa-chevron-up"></i>
-                                        )}
+                                    <div className='d-flex justify-content-between' onClick={() => { toggleOpen2() }} style={{ width: "270px", position: "relative", right: "px" }}>
+                                        Profosyonel Araçlar
+                                        <i className={`fa-solid fa-chevron-${arrowDirection2} ms-5 ps-5`}></i>
                                     </div>
                                 </ButtonB>
                                 <Collapse in={open2}>
@@ -131,13 +133,9 @@ export default function More() {
                                     className='text-white fw-bold collapses'
                                     style={{ fontSize: "14px", position: "relative", top: "-8px" }}
                                 >
-                                    <div className='d-flex justify-content-between' onClick={() => { toggleArrow(0) }} style={{ width: "270px", position: "relative", right: "" }}>
+                                    <div className='d-flex justify-content-between' onClick={() => { toggleOpen3() }} style={{ width: "270px", position: "relative", right: "" }}>
                                         Ayarlar ve Destek
-                                        {isArrowUp ? (
-                                            <i className="fa-solid fa-chevron-down ms-5 ps-5"></i>
-                                        ) : (
-                                            <i className="fa-solid fa-chevron-up ms-5 ps-5"></i>
-                                        )}
+                                        <i className={`fa-solid fa-chevron-${arrowDirection3} ms-5 ps-5`}></i>
                                     </div>
                                 </ButtonB>
                                 <Collapse in={open3}>

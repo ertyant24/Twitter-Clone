@@ -63,7 +63,7 @@ function Menu() {
                     <li className={`nav-item ${item === 5 ? "active" : ""}`} onClick={() => { active(5) }}>
                         <Link className="nav-link">
                             <div className='home-1' style={{ width: "150px" }}>
-                                <svg viewBox="0 0 24 24" style={{ width: "24px", height: "24px", paddingBottom: "3px", marginRight: "16px" }}>
+                                <svg viewBox="0 0 24 24" style={{ width: "24px", height: "24px", paddingBottom: "3px", marginRight: "14px" }}>
                                     <path fill='white' d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                                 </svg>Premium
                             </div>
@@ -72,7 +72,7 @@ function Menu() {
                     <li className={`nav-item ${item === 6 ? "active" : ""}`} onClick={() => { active(6) }}>
                         <Link className="nav-link" >
                             <div className='home' style={{ width: "140px" }}>
-                                <i className="fa-solid fa-user me-3"></i>Profil
+                                <i style={{marginRight: "19px"}} className="fa-solid fa-user"></i>Profil
                             </div>
                         </Link>
                     </li>
