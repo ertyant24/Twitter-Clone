@@ -20,7 +20,7 @@ function Menu() {
             <nav className='mt-1 ' style={{ fontSize: "20px" }}>
                 <ul className='' style={{ listStyle: "none" }}>
                     <div className='pb-1'>
-                        <Logo/>
+                        <Logo />
                     </div>
                     <li className={`nav-item ${item === 0 ? "active" : ""}`} onClick={() => { active(0) }}>
                         <Link to="/" className="nav-link" href="#">
@@ -77,8 +77,11 @@ function Menu() {
                         </Link>
                     </li>
                     <li className={`nav-item ${item === 7 ? "active" : ""}`} onClick={() => { active(7) }}>
-
-                        <More />
+                        <Link className='nav-link'>
+                            <div className='home' style={{ width: "190px", height: "49px" }}>
+                                <More />
+                            </div>
+                        </Link>
                         {/* <i className="fa-solid fa-circle-plus me-3"></i>Daha fazla */}
 
                     </li>

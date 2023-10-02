@@ -20,6 +20,9 @@ body {
 .active div {
     font-weight: 600;
 }
+.active Button {
+    font-weight: 600;
+}
 .active path {
     fill: #27a3c9;
 }
