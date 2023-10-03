@@ -6,6 +6,11 @@ import Explore from "../pages/explore/Explore";
 import Notifications from "../pages/notifications/Notifications";
 import MainLayout from "../layouts/MainLayout";
 import NotFound from "../pages/notfound/NotFound";
+import Messages from "../pages/messages/Messages";
+import Lists from "../pages/lists/Lists";
+import Premium from "../pages/premium/Premium";
+import Profile from "../pages/profile/Profile";
+import Bookmarks from "../pages/bookmarks/Bookmarks";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +28,26 @@ const router = createBrowserRouter([
             {
                 path: "notifications",
                 element: <Notifications />
+            },
+            {
+                path: "messages",
+                element: <Messages />
+            },
+            {
+                path: "lists",
+                element: <Lists />
+            },
+            {
+                path: "premium",
+                element: <Premium />
+            },
+            {
+                path: "/:slug",
+                element: <Profile />
+            },
+            {
+                path: "bookmarks",
+                element: <Bookmarks />
             },
         ]
     },

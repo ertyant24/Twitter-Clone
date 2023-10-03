@@ -4,8 +4,10 @@ import Button from '../components/Button';
 import MoreInfo from '../components/MoreInfo';
 import Logo from '../logo/Logo';
 import More from '../components/More';
+import store from '../store';
 
 function Menu() {
+    // const username = store.getState().auth.currentAcccounts.username
 
     const [item, setItem] = useState("");
     const [not, setNot] = useState("");
@@ -47,21 +49,28 @@ function Menu() {
                         </Link>
                     </li>
                     <li className={`nav-item ${item === 3 ? "active" : ""}`} onClick={() => { active(3) }}>
-                        <Link className="nav-link" >
+                        <Link to="/messages" className="nav-link" >
                             <div className='home' style={{ width: "140px" }}>
                                 <i className="fa-solid fa-envelope me-3"></i>Mesajlar
                             </div>
                         </Link>
                     </li>
                     <li className={`nav-item ${item === 4 ? "active" : ""}`} onClick={() => { active(4) }}>
-                        <Link className="nav-link" >
+                        <Link to="/lists" className="nav-link" >
                             <div className='home' style={{ width: "140px" }}>
                                 <i className="fa-regular fa-rectangle-list me-3"></i>Listeler
                             </div>
                         </Link>
                     </li>
+                    <li className={`nav-item ${item === 8 ? "active" : ""}`} onClick={() => { active(8) }}>
+                        <Link to="/bookmarks" className="nav-link" >
+                            <div className='home' style={{ width: "170px" }}>
+                            <i style={{paddingLeft: "2px", paddingRight: "5px"}} class="fa-regular fa-bookmark me-3"></i>Yer İşaretleri
+                            </div>
+                        </Link>
+                    </li>
                     <li className={`nav-item ${item === 5 ? "active" : ""}`} onClick={() => { active(5) }}>
-                        <Link className="nav-link">
+                        <Link to="/premium" className="nav-link">
                             <div className='home-1' style={{ width: "150px" }}>
                                 <svg viewBox="0 0 24 24" style={{ width: "24px", height: "24px", paddingBottom: "3px", marginRight: "14px" }}>
                                     <path fill='white' d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -70,7 +79,7 @@ function Menu() {
                         </Link>
                     </li>
                     <li className={`nav-item ${item === 6 ? "active" : ""}`} onClick={() => { active(6) }}>
-                        <Link className="nav-link" >
+                        <Link to={`/${store.getState().auth.currentAcccounts.username}`} className="nav-link" >
                             <div className='home' style={{ width: "140px" }}>
                                 <i style={{marginRight: "19px"}} className="fa-solid fa-user"></i>Profil
                             </div>

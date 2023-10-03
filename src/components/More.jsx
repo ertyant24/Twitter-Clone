@@ -55,7 +55,7 @@ export default function More() {
                 anchorEl={anchorEl}
                 onClose={handleClose}
                 anchorOrigin={{
-                    vertical: 'top',
+                    vertical: 'bottom',
                     horizontal: 'left',
                 }}
                 transformOrigin={{
@@ -64,12 +64,12 @@ export default function More() {
                 }}
             >
                 <Box
-                    style={{ backgroundColor: "white" }}
+                    style={{ backgroundColor: "#2f2f2f" }}
                     sx={{
                         display: 'flex',
                         flexWrap: 'wrap',
                         '& > :not(style)': {
-                            m: 0.2,
+                            m: 0.3,
                             width: 312,
                             minHeight: 275,
                             borderRadius: 1,
@@ -82,7 +82,7 @@ export default function More() {
                                 <i className="fa-solid fa-at me-4"></i>Bağlan
                             </div>
                             <div className='home-4 ms-2'>
-                                <i class="fa-solid fa-money-bills me-4"></i>Para kazanma
+                                <i className="fa-solid fa-money-bills me-4"></i>Para kazanma
                             </div><hr />
                             <div className="">
                                 <ButtonB
