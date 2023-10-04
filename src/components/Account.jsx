@@ -2,8 +2,11 @@ import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import store from '../store';
 import Profiles from './Profiles';
+import { useNavigate } from 'react-router-dom';
 
 function Account() {
+    const navigate = useNavigate()
+
     // const account = store.getState().auth.accounts
     const currentAccount = store.getState().auth.currentAcccounts
 
@@ -35,6 +38,7 @@ function Account() {
                         </div>
                     </div>
                     <Popover
+                        onClick={() => {navigate(`/${currentAccount.username}`)}}
                         id={id}
                         open={open}
                         anchorEl={anchorEl}
@@ -50,7 +54,10 @@ function Account() {
                     >
                         <div className='text-white' style={{ width: "300px", padding: "10px 12px", backgroundColor: "black", boxShadow: "4px 4px 8px white", border: "2px solid #2f2f2f" }}>
                             <div className='align-items-center'>
-                                <Profiles/>
+                               
+                                     <Profiles />
+                               
+                               
                                 {/* <img className='rounded-circle' src={store.getState().auth.currentAcccounts.avatar} alt="avatar" width="40px" height="40px" />
                                 <div className='d-flex flex-column ms-3' style={{ fontSize: "14px" }}>
                                     <div style={{ fontWeight: "700", height: "20px" }}>{store.getState().auth.currentAcccounts.fullName}</div>

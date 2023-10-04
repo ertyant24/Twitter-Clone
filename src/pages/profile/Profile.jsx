@@ -1,13 +1,14 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
+import store from '../../store';
 
 function Profile() {
 
-  const {slug} = useParams();
+  const {username} = useParams();
 
   return (
     <>
-      Profile Page - {slug}
+      Profile Page - {username}
     </>
   )
 }

@@ -11,6 +11,7 @@ import Lists from "../pages/lists/Lists";
 import Premium from "../pages/premium/Premium";
 import Profile from "../pages/profile/Profile";
 import Bookmarks from "../pages/bookmarks/Bookmarks";
+import store from "../store";
 
 const router = createBrowserRouter([
     {
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
                 element: <Premium />
             },
             {
-                path: "/:slug",
+                path: `:username`,
                 element: <Profile />
             },
             {

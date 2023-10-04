@@ -64,15 +64,14 @@ export default function More() {
                 }}
             >
                 <Box
-                    style={{ backgroundColor: "#2f2f2f" }}
+                    style={{ backgroundColor: "#1d1c1c" }}
                     sx={{
                         display: 'flex',
                         flexWrap: 'wrap',
                         '& > :not(style)': {
-                            m: 0.3,
-                            width: 312,
+                            m: 0.4,
+                            width: 315,
                             minHeight: 275,
-                            borderRadius: 1,
                         },
                     }}
                 >
