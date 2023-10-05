@@ -67,6 +67,12 @@ body {
     cursor: pointer;
 }
 
+.home-7:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #232222;    
+}
+
 
 .notifications {
     width: 15px;

@@ -10,7 +10,7 @@ function Button({ size, name }) {
                 </Link> : <Link className='btn btn-info rounded-pill' style={{minHeight: "34px", minWidth: "34px", paddingLeft: "20px", paddingRight: "20px"}}>
                     <span className='align-middle fw-bold fs-6'>{name}</span>
                 </Link>
-            }
+            }   
 
         </>
     )

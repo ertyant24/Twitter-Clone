@@ -25,7 +25,7 @@ function Account() {
 
     return (
         <>
-            <div style={{ marginLeft: "30px", height: "62px", width: "255px", marginBottom: "5px" }} className='mt-auto home d-flex align-items-center'>
+            <div style={{ marginLeft: "30px", height: "62px", width: "250px", marginBottom: "5px" }} className='mt-auto home d-flex align-items-center'>
                 <div>
                     <div className='d-flex justify-content-start' style={{ width: "250px", height: "62px", cursor: "pointer" }} aria-describedby={id} variant="" onClick={handleClick}>
                         <div className='d-flex align-items-center'>
@@ -34,7 +34,7 @@ function Account() {
                                 <div style={{ fontWeight: "700", height: "17px" }}>{currentAccount.fullName}</div>
                                 <div className='text-secondary'>{`@${currentAccount.username}`}</div>
                             </div>
-                            <i style={{ marginLeft: "90px" }} className="fa-solid fa-ellipsis"></i>
+                            <i style={{ marginLeft: "86px" }} className="fa-solid fa-ellipsis"></i>
                         </div>
                     </div>
                     <Popover
