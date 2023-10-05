@@ -14,7 +14,7 @@ function Followers() {
                                 <img className='rounded-circle' src={follower.avatar} alt="avatar" width="46px" height="46px"/>
                             </div>
                             <div className='d-flex flex-column ms-3 justify-content-center'>
-                                <span>{follower.fullName} {follower.icon ? <i class="fa-solid fa-circle-check"></i> : ""}</span>
+                                <span className='home-8' style={{fontWeight: "700"}}>{follower.fullName} {follower.icon ? <i class="fa-solid fa-circle-check text-info"></i> : ""}</span>
                                 <span className='text-secondary'>@{follower.username}</span>
                             </div>
                             <div style={{top: "8px", right: "24px", position: "absolute"}} className=''>
