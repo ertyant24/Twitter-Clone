@@ -46,5 +46,34 @@ export const topics = [
             value: "Çakal"
         },
         postCount: 2598
+    },
+    {
+        title: "Spor - Gündemdekiler",
+        topic: {
+            type: "query",
+            value: "Yönetimİstifa"
+        },
+        postCount: 2598
+    }
+]
+
+export const followers = [
+    {
+        fullName: "Kripto Messi",
+        username: "Kriptomessi",
+        avatar: "https://pbs.twimg.com/profile_images/1624275309896904709/w5VLP8zv_200x200.jpg",
+        icon: true
+    },
+    {
+        fullName: "Satoshi Nakamoto",
+        username: "satoshi",
+        avatar: "https://pbs.twimg.com/profile_images/1706096959369486336/AnSeY7-E_200x200.jpg",
+        icon: true
+    },
+    {
+        fullName: "Aykırı",
+        username: "aykiricomtr",
+        avatar: "https://pbs.twimg.com/profile_images/1694580341191643137/KoimEp99_200x200.jpg",
+        icon: false
     }
 ]
