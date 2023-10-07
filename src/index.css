@@ -159,6 +159,27 @@ body {
     text-decoration: underline;
 }
 
+.home-9 {
+    overflow-y: auto;
+}
+
+.home-9::-webkit-scrollbar {
+    display: none;
+}
+
+.home-10 {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-10:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+}
+.home-10:hover i{
+    color: #0688af;
+}
 /*
 
     genişlik = 1265px

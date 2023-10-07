@@ -27,7 +27,7 @@ function Account() {
         <>
             <div style={{ marginLeft: "30px", height: "62px", width: "250px", marginBottom: "5px" }} className='mt-auto home d-flex align-items-center'>
                 <div>
-                    <div className='d-flex justify-content-start' style={{ width: "250px", height: "62px", cursor: "pointer" }} aria-describedby={id} variant="" onClick={handleClick}>
+                    <div onClick={handleClick} className='d-flex justify-content-start' style={{ width: "250px", height: "62px", cursor: "pointer" }} aria-describedby={id} variant="">
                         <div className='d-flex align-items-center'>
                             <img className='rounded-circle' src={currentAccount.avatar} alt="avatar" width="40px" height="40px" />
                             <div className='d-flex flex-column ms-3' style={{ fontSize: "14px" }}>

@@ -1,13 +1,15 @@
 export const topics = [
     {
+        id: 1,
         title: "Haberler - Gündemdekiler",
         topic: {
             type: "query",
             value: "SONDAKİKA"
         },
-        postCount: "14,3 B"
+        postCount: 14306
     },
     {
+        id: 2,
         title: "Türkiye tarihinde gündemde",
         topic: {
             type: "tag",
@@ -16,14 +18,25 @@ export const topics = [
         postCount: 8745
     },
     {
+        id: 3,
+        title: "Spor - Gündemdekiler",
+        topic: {
+            type: "query",
+            value: "AhmetNurÇebiİstifa"
+        },
+        postCount: 103456
+    },
+    {
+        id: 4,
         title: "Türkiye tarihinde gündemde",
         topic: {
             type: "query",
             value: "Starlink"
         },
-        postCount: "13,4 B"
+        postCount: 13498
     },
     {
+        id: 5,
         title: "Haberler - Gündemdekiler",
         topic: {
             type: "tag",
@@ -32,6 +45,7 @@ export const topics = [
         postCount: 1345
     },
     {
+        id: 6,
         title: "Spor - Gündemdekiler",
         topic: {
             type: "tag",
@@ -40,6 +54,7 @@ export const topics = [
         postCount: 2768
     },
     {
+        id: 7,
         title: "Gündemdekiler",
         topic: {
             type: "tag",
@@ -48,6 +63,7 @@ export const topics = [
         postCount: 2598
     },
     {
+        id: 8,
         title: "Spor - Gündemdekiler",
         topic: {
             type: "query",

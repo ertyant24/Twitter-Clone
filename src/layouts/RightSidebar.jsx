@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 function RightSidebar() {
   return (
     <>
-      <aside className='pt-2 ps-3' style={{width: "350px",}}>
+      <aside className='pt-2 ps-3 home-9' style={{width: "365px"}}>
         <Search />
         <Abone />
         <Agenda />
