@@ -4,7 +4,6 @@ import { setCurrentAccount } from '../store/auth/action';
 import { useNavigate } from 'react-router-dom';
 
 function Profiles() {
-    const navigate = useNavigate()
 
     const profiles = store.getState().auth.accounts;
     const currentAccount = store.getState().auth.currentAcccounts;

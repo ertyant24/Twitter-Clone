@@ -12,6 +12,7 @@ import Premium from "../pages/premium/Premium";
 import Profile from "../pages/profile/Profile";
 import Bookmarks from "../pages/bookmarks/Bookmarks";
 import store from "../store";
+import Trends from "../pages/trends/Trends";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
                 path: "bookmarks",
                 element: <Bookmarks />
             },
+            {
+                path: "trends",
+                element: <Trends />
+            }
         ]
     },
     {

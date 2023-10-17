@@ -72,7 +72,7 @@ function Agenda() {
                     ))
                 }
                 <div style={{ padding: "25px 15px", height: "50px", fontSize: "14px" }} className='home-7 d-flex align-items-center'>
-                    <Link className='text-decoration-none text-info'>Daha fazla göster</Link>
+                    <Link to="/trends" className='text-decoration-none text-info'>Daha fazla göster</Link>
                 </div>
             </div>
         </>

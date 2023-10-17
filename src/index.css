@@ -180,6 +180,22 @@ body {
 .home-10:hover i{
     color: #0688af;
 }
+
+.home-11 {
+    padding: 3px 10px;
+}
+.home-11:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+    cursor: pointer;
+    border-radius: 6px;
+}
+.home-12 {
+    color: white;
+}
+.home-12:hover {
+    color: red;
+    text-shadow: 4px 4px 16px red;
+}
 /*
 
     genişlik = 1265px
