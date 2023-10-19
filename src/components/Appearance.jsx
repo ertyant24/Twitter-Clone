@@ -21,6 +21,7 @@ const style = {
 function Appearance() {
 
     const fontSizeRef = useRef();
+    const renk = useRef();
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -54,7 +55,7 @@ function Appearance() {
                                 <span>19d</span>
                             </div>
                             <div ref={fontSizeRef} style={{ fontSize: "15px", marginTop: "-4px", lineHeight: "18px" }}>
-                                X' in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlaryatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler, etiketler ve <Link style={{ textDecoration: "none" }}>@X</Link> gibi bahsetmeler içerebilir.
+                                X' in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlaryatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler, etiketler ve <Link ref={renk} style={{ textDecoration: "none" }}>@X</Link> gibi bahsetmeler içerebilir.
                             </div>
                         </div>
                     </div>
@@ -70,6 +71,19 @@ function Appearance() {
                                 <div onClick={() => {fontSizeRef.current.style.fontSize = '21px'}} style={{ position: "absolute", backgroundColor: "#3061a2", top: "-6px", width: "20px", height: "20px", borderRadius: "50%", left: "426px" }}></div>
                             </div>
                             <div style={{ position: "absolute", top: "9px", width: "20px", height: "20px", borderRadius: "50%", left: "500px" }}>Aa</div>
+                        </div>
+                    </div>
+                    <div className='mt-3'>
+                        <div className='text-secondary mb-2' style={{fontSize: "14px"}}>
+                            Renk
+                        </div>
+                        <div className='d-flex flex-row gap-5 ps-4' style={{border: "1px solid white", padding: "18px 18px", borderRadius: "14px"}}>
+                            <div onClick={() => {renk.current.style.color = 'blue'}} style={{width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "#3061a2", cursor: "pointer"}}></div>
+                            <div onClick={() => {renk.current.style.color = 'yellow'}} style={{width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "yellow", cursor: "pointer"}}></div>
+                            <div onClick={() => {renk.current.style.color = 'red'}} style={{width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "red", cursor: "pointer"}}></div>
+                            <div onClick={() => {renk.current.style.color = 'purple'}} style={{width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "purple", cursor: "pointer"}}></div>
+                            <div onClick={() => {renk.current.style.color = 'orange'}} style={{width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "orange", cursor: "pointer"}}></div>
+                            <div onClick={() => {renk.current.style.color = 'green'}} style={{width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "green", cursor: "pointer"}}></div>
                         </div>
                     </div>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
