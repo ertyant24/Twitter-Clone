@@ -104,6 +104,8 @@ function Appearance() {
                                 ic2.current.style.backgroundColor = "#9d9d9d"
                                 dıs3.current.style.border = "none"
                                 ic3.current.style.backgroundColor = "black"
+                                document.body.style.backgroundColor = "white"
+                                document.body.style.color = "black"
                             }} ref={dıs1} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "whitesmoke", border: "1px solid black", top: "14px", left: "30px", cursor: "pointer" }}>
                                 <span ref={ic1} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "white", position: "absolute", top: "24px", left: "22px", border: "1px solid black" }}></span> <span style={{ position: "absolute", top: "20px", left: "44px", color: "black", fontSize: "14px" }}>Varsayılan</span>
                             </div>
@@ -114,6 +116,8 @@ function Appearance() {
                                 ic1.current.style.backgroundColor = "white"
                                 dıs3.current.style.border = "none"
                                 ic3.current.style.backgroundColor = "black"
+                                document.body.style.backgroundColor = "#646464"
+                                document.body.style.color = "white"
                             }} ref={dıs2} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "#323232", border: "1px solid black", top: "14px", left: "195px", cursor: "pointer" }}>
                                 <span ref={ic2} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "#323232", position: "absolute", top: "24px", left: "42px", border: "1px solid white" }}></span> <span style={{ position: "absolute", top: "20px", left: "64px", color: "white", fontSize: "14px" }}>Loş</span>
                             </div>
@@ -124,6 +128,8 @@ function Appearance() {
                                 ic1.current.style.backgroundColor = "#white"
                                 dıs2.current.style.border = "none"
                                 ic2.current.style.backgroundColor = "#9d9d9d"
+                                document.body.style.backgroundColor = "black"
+                                document.body.style.color = "white"
                             }} ref={dıs3} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "black", border: "1px solid black", top: "14px", left: "360px", cursor: "pointer" }}>
                                 <span ref={ic3} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "black", position: "absolute", top: "24px", left: "18px", border: "1px solid white" }}></span> <span style={{ position: "absolute", top: "20px", left: "40px", color: "white", fontSize: "14px" }}>Işıklar kapalı</span>
                             </div>
