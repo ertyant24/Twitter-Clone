@@ -34,7 +34,6 @@ function UserCard({ follower }) {
                     {
                         follow ? <button onMouseOut={changeText1} onMouseOver={changeText} onClick={changeFollow1} ref={text} style={{ height: "30px", border: "1px solid white", width: "104px", backgroundColor: "rgb(22, 24, 28)" }} className='rounded-pill home-12'>Takip Ediliyor</button> : <button onClick={changeFollow} style={{ height: "30px", border: "none", width: "84px" }} className='rounded-pill '>Takip Et</button>
                     }
-
                 </div>
             </div>
         </>

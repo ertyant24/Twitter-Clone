@@ -6,10 +6,10 @@ import ButtonB from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-
-
+import Appearance from './Appearance';
 
 export default function More() {
+
     const [arrowDirection1, setArrowDirection1] = useState('down');
     const [arrowDirection2, setArrowDirection2] = useState('down');
     const [arrowDirection3, setArrowDirection3] = useState('down');
@@ -76,7 +76,7 @@ export default function More() {
                     }}
                 >
                     <Paper className='text-white' style={{ overflowY: "auto", overscrollBehaviorY: "", backgroundColor: "black", boxShadow: "1px 1px 6px black" }} elevation={9}>
-                        <div className=''>
+                        <div>
                             <div className='home-4 ms-2'>
                                 <i className="fa-solid fa-at me-4"></i>Bağlan
                             </div>
@@ -150,7 +150,9 @@ export default function More() {
                                 <Collapse in={open3}>
                                     <div className='collapses mt-3' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
                                         <i className="fa-solid fa-pen-to-square me-2"></i>Görünüm
+                                        <Appearance/>
                                     </div>
+                                    
                                 </Collapse>
                                 <Collapse in={open3}>
                                     <div className='collapses mt-3' id="example-collapse-text" style={{ paddingLeft: "13px", position: "relative", top: "-8px", fontSize: "14px", width: "290px", height: "24px", cursor: "pointer" }}>
