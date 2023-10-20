@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -31,7 +31,13 @@ function Appearance() {
     const spanRef1 = useRef();
     const spanRef2 = useRef();
     const spanRef3 = useRef();
-    
+    const check1 = useRef();
+    const check2 = useRef();
+    const check3 = useRef();
+    const check4 = useRef();
+    const check5 = useRef();
+    const check6 = useRef();
+
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -83,17 +89,39 @@ function Appearance() {
                             <div style={{ position: "absolute", top: "9px", width: "20px", height: "20px", borderRadius: "50%", left: "500px" }}>Aa</div>
                         </div>
                     </div>
-                    <div className='mt-3'>
+                    <div className='mt-3 position-relative'>
                         <div className='text-secondary mb-2' style={{ fontSize: "14px" }}>
                             Renk
                         </div>
                         <div className='d-flex flex-row gap-5 ps-4' style={{ border: "1px solid white", padding: "18px 18px", borderRadius: "14px", backgroundColor: "#9d9d9d" }}>
-                            <div onClick={() => { renk.current.style.color = 'blue' }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "#3061a2", cursor: "pointer" }}></div>
-                            <div onClick={() => { renk.current.style.color = 'yellow' }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "yellow", cursor: "pointer" }}></div>
+                            <div onClick={() => { 
+                                renk.current.style.color = 'blue' 
+                                check1.current.style.color = 'white'
+                                }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "#3061a2", cursor: "pointer" }}></div>
+                            <div onClick={() => { 
+                                renk.current.style.color = 'yellow' 
+                                check2.current.style.color = 'black'
+                                }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "yellow", cursor: "pointer" }}></div>
                             <div onClick={() => { renk.current.style.color = 'red' }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "red", cursor: "pointer" }}></div>
-                            <div onClick={() => { renk.current.style.color = 'purple' }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "purple", cursor: "pointer" }}></div>
+                            <div onClick={() => { 
+                                renk.current.style.color = 'purple' 
+                                check4.current.style.color = 'white'
+                                check1.current.style.color = '#3061a2'
+                                check2.current.style.color = 'yellow'
+                                check3.current.style.color = 'red'
+                                check5.current.style.color = 'orange'
+                                check6.current.style.color = 'green'
+                                }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "purple", cursor: "pointer" }}></div>
                             <div onClick={() => { renk.current.style.color = 'orange' }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "orange", cursor: "pointer" }}></div>
                             <div onClick={() => { renk.current.style.color = 'green' }} style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "green", cursor: "pointer" }}></div>
+                        </div>
+                        <div className='fs-4 d-flex flex-row' style={{gap: "67px", paddingLeft: "34px", position: "absolute", top: "58px", cursor: "pointer"}}>
+                            <i ref={check1} style={{color: "#3061a2"}} class="fa-solid fa-check"></i>
+                            <i style={{color: "yellow",}} ref={check2} class="fa-solid fa-check"></i>
+                            <i style={{color: "red"}} ref={check3} class="fa-solid fa-check"></i>
+                            <i style={{color: "purple"}} ref={check4} class="fa-solid fa-check"></i>
+                            <i style={{color: "orange"}} ref={check5} class="fa-solid fa-check"></i>
+                            <i style={{color: "green"}} ref={check6} class="fa-solid fa-check"></i>
                         </div>
                     </div>
                     <div className='mt-3'>
@@ -101,7 +129,7 @@ function Appearance() {
                             Arka plan
                         </div>
                         <div style={{ position: "relative", border: "1px solid white", borderRadius: "14px", padding: "46px 18px", backgroundColor: "#9d9d9d" }}>
-                            <div onMouseOver={() => {spanRef1.current.style.backgroundColor = '#c1c1c1'}} onMouseOut={() => {spanRef1.current.style.backgroundColor = 'white'}} onClick={() => {
+                            <div onMouseOver={() => { spanRef1.current.style.backgroundColor = '#c1c1c1' }} onMouseOut={() => { spanRef1.current.style.backgroundColor = 'white' }} onClick={() => {
                                 dıs1.current.style.border = "3px solid #3061a2"
                                 ic1.current.style.backgroundColor = "#3061a2"
                                 dıs2.current.style.border = "none"
@@ -111,10 +139,10 @@ function Appearance() {
                                 document.body.style.backgroundColor = "white"
                                 document.body.style.color = "black"
                             }} ref={dıs1} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "whitesmoke", border: "1px solid black", top: "14px", left: "30px", cursor: "pointer" }}>
-                                <span ref={spanRef1} style={{position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "15px"}}></span>
+                                <span ref={spanRef1} style={{ position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "15px" }}></span>
                                 <span className='' ref={ic1} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "white", position: "absolute", top: "24px", left: "22px", border: "1px solid black" }}></span> <span style={{ position: "absolute", top: "20px", left: "44px", color: "black", fontSize: "14px" }}>Varsayılan</span>
                             </div>
-                            <div onMouseOver={() => {spanRef2.current.style.backgroundColor = '#454545'}} onMouseOut={() => {spanRef2.current.style.backgroundColor = '#323232'}} onClick={() => {
+                            <div onMouseOver={() => { spanRef2.current.style.backgroundColor = '#454545' }} onMouseOut={() => { spanRef2.current.style.backgroundColor = '#323232' }} onClick={() => {
                                 dıs2.current.style.border = "3px solid #3061a2"
                                 ic2.current.style.backgroundColor = "#3061a2"
                                 dıs1.current.style.border = "none"
@@ -124,10 +152,10 @@ function Appearance() {
                                 document.body.style.backgroundColor = "#646464"
                                 document.body.style.color = "white"
                             }} ref={dıs2} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "#323232", border: "1px solid black", top: "14px", left: "195px", cursor: "pointer" }}>
-                                <span ref={spanRef2} style={{position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "35px"}}></span>
+                                <span ref={spanRef2} style={{ position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "35px" }}></span>
                                 <span ref={ic2} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "#323232", position: "absolute", top: "24px", left: "42px", border: "1px solid white" }}></span> <span style={{ position: "absolute", top: "20px", left: "64px", color: "white", fontSize: "14px" }}>Loş</span>
                             </div>
-                            <div onMouseOver={() => {spanRef3.current.style.backgroundColor = '#2e2e2e'}} onMouseOut={() => {spanRef3.current.style.backgroundColor = 'black'}} onClick={() => {
+                            <div onMouseOver={() => { spanRef3.current.style.backgroundColor = '#2e2e2e' }} onMouseOut={() => { spanRef3.current.style.backgroundColor = 'black' }} onClick={() => {
                                 dıs3.current.style.border = "3px solid #3061a2"
                                 ic3.current.style.backgroundColor = "#3061a2"
                                 dıs1.current.style.border = "none"
@@ -137,7 +165,7 @@ function Appearance() {
                                 document.body.style.backgroundColor = "black"
                                 document.body.style.color = "white"
                             }} ref={dıs3} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "black", border: "1px solid black", top: "14px", left: "360px", cursor: "pointer" }}>
-                                <span ref={spanRef3} style={{position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "11px"}}></span>
+                                <span ref={spanRef3} style={{ position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "11px" }}></span>
                                 <span ref={ic3} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "black", position: "absolute", top: "24px", left: "18px", border: "1px solid white" }}></span> <span style={{ position: "absolute", top: "20px", left: "40px", color: "white", fontSize: "14px" }}>Işıklar kapalı</span>
                             </div>
                         </div>
