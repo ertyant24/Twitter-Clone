@@ -28,6 +28,10 @@ function Appearance() {
     const ic2 = useRef();
     const dıs3 = useRef();
     const ic3 = useRef();
+    const spanRef1 = useRef();
+    const spanRef2 = useRef();
+    const spanRef3 = useRef();
+    
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -97,7 +101,7 @@ function Appearance() {
                             Arka plan
                         </div>
                         <div style={{ position: "relative", border: "1px solid white", borderRadius: "14px", padding: "46px 18px", backgroundColor: "#9d9d9d" }}>
-                            <div onClick={() => {
+                            <div onMouseOver={() => {spanRef1.current.style.backgroundColor = '#c1c1c1'}} onMouseOut={() => {spanRef1.current.style.backgroundColor = 'white'}} onClick={() => {
                                 dıs1.current.style.border = "3px solid #3061a2"
                                 ic1.current.style.backgroundColor = "#3061a2"
                                 dıs2.current.style.border = "none"
@@ -107,9 +111,10 @@ function Appearance() {
                                 document.body.style.backgroundColor = "white"
                                 document.body.style.color = "black"
                             }} ref={dıs1} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "whitesmoke", border: "1px solid black", top: "14px", left: "30px", cursor: "pointer" }}>
-                                <span ref={ic1} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "white", position: "absolute", top: "24px", left: "22px", border: "1px solid black" }}></span> <span style={{ position: "absolute", top: "20px", left: "44px", color: "black", fontSize: "14px" }}>Varsayılan</span>
+                                <span ref={spanRef1} style={{position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "15px"}}></span>
+                                <span className='' ref={ic1} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "white", position: "absolute", top: "24px", left: "22px", border: "1px solid black" }}></span> <span style={{ position: "absolute", top: "20px", left: "44px", color: "black", fontSize: "14px" }}>Varsayılan</span>
                             </div>
-                            <div onClick={() => {
+                            <div onMouseOver={() => {spanRef2.current.style.backgroundColor = '#454545'}} onMouseOut={() => {spanRef2.current.style.backgroundColor = '#323232'}} onClick={() => {
                                 dıs2.current.style.border = "3px solid #3061a2"
                                 ic2.current.style.backgroundColor = "#3061a2"
                                 dıs1.current.style.border = "none"
@@ -119,18 +124,20 @@ function Appearance() {
                                 document.body.style.backgroundColor = "#646464"
                                 document.body.style.color = "white"
                             }} ref={dıs2} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "#323232", border: "1px solid black", top: "14px", left: "195px", cursor: "pointer" }}>
+                                <span ref={spanRef2} style={{position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "35px"}}></span>
                                 <span ref={ic2} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "#323232", position: "absolute", top: "24px", left: "42px", border: "1px solid white" }}></span> <span style={{ position: "absolute", top: "20px", left: "64px", color: "white", fontSize: "14px" }}>Loş</span>
                             </div>
-                            <div onClick={() => {
+                            <div onMouseOver={() => {spanRef3.current.style.backgroundColor = '#2e2e2e'}} onMouseOut={() => {spanRef3.current.style.backgroundColor = 'black'}} onClick={() => {
                                 dıs3.current.style.border = "3px solid #3061a2"
                                 ic3.current.style.backgroundColor = "#3061a2"
                                 dıs1.current.style.border = "none"
-                                ic1.current.style.backgroundColor = "#white"
+                                ic1.current.style.backgroundColor = "white"
                                 dıs2.current.style.border = "none"
                                 ic2.current.style.backgroundColor = "#9d9d9d"
                                 document.body.style.backgroundColor = "black"
                                 document.body.style.color = "white"
                             }} ref={dıs3} style={{ position: "absolute", width: "140px", height: "65px", backgroundColor: "black", border: "1px solid black", top: "14px", left: "360px", cursor: "pointer" }}>
+                                <span ref={spanRef3} style={{position: "absolute", width: "30px", height: "30px", borderRadius: "50%", backgroundColor: "grey", top: "17px", left: "11px"}}></span>
                                 <span ref={ic3} style={{ width: "16px", height: "16px", borderRadius: "50%", backgroundColor: "black", position: "absolute", top: "24px", left: "18px", border: "1px solid white" }}></span> <span style={{ position: "absolute", top: "20px", left: "40px", color: "white", fontSize: "14px" }}>Işıklar kapalı</span>
                             </div>
                         </div>
