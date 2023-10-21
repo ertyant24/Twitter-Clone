@@ -70,7 +70,133 @@ export const topics = [
             value: "Yönetimİstifa"
         },
         postCount: 2598
-    }
+    },
+    {
+        id: 9,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "tag",
+            value: "Anakonda"
+        },
+        postCount: 1283
+    },
+    {
+        id: 10,
+        title: "Gündemdekiler",
+        topic: {
+            type: "query",
+            value: "Dolar"
+        },
+        postCount: 91700
+    },
+    {
+        id: 11,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "query",
+            value: "DevrimÖzkan"
+        },
+        postCount: 2598
+    },
+    {
+        id: 12,
+        title: "Spor - Gündemdekiler",
+        topic: {
+            type: "query",
+            value: "GSvBJK"
+        },
+        postCount: 26300
+    },
+    {
+        id: 13,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "tag",
+            value: "Türk Milliyetçisiyim"
+        },
+        postCount: 18400
+    },
+    {
+        id: 14,
+        title: "Siyaset - Gündemdekiler",
+        topic: {
+            type: "tag",
+            value: "Özgür Özel"
+        },
+        postCount: 2602
+    },
+    {
+        id: 15,
+        title: "LOSC - Gündemdekiler",
+        topic: {
+            type: "tag",
+            value: "Burak Yılmaz"
+        },
+        postCount: 3970
+    },
+    {
+        id: 16,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "tag",
+            value: "Tete"
+        },
+        postCount: 39100
+    },
+    {
+        id: 17,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "tag",
+            value: "Miami'de"
+        },
+        postCount: 12600
+    },
+    {
+        id: 18,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "query",
+            value: "Israel_under_attack"
+        },
+        postCount: 13400
+    },
+    {
+        id: 19,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "query",
+            value: "deprem"
+        },
+        postCount: 50200
+    },
+    {
+        id: 20,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "tag",
+            value: "Gs3"
+        },
+        postCount: 4192
+    },
+    {
+        id: 21,
+        title: "İş dünyası ve finans - Gündemdekiler",
+        topic: {
+            type: "query",
+            value: "Floki"
+        },
+        postCount: 12800
+    },
+    {
+        id: 22,
+        title: "Türkiye tarihinde gündemde",
+        topic: {
+            type: "tag",
+            value: "Zelenskiy"
+        },
+        postCount: 1164
+    },
 ]
 
 export const followers = [
