@@ -3,8 +3,28 @@ import { numberFormat } from '../../utils/Format';
 import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: '#171717',
+  border: '1px solid #0a0a0a',
+  borderRadius: "10px",
+  boxShadow: 24,
+};
 
 function Trends() {
+
+  const [open1, setOpen1] = React.useState(false);
+  const handleOpen = () => setOpen1(true);
+  const handleClose1 = () => setOpen1(false);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -29,14 +49,34 @@ function Trends() {
   return (
     <>
       <div className='' style={{ backgroundColor: "rgb(1, 2, 2)", borderRadius: "16px", }}>
-        <div className='d-flex flex-row justify-content-between pe-1' style={{}}>
-          <h5 className='position-sticky' style={{ fontSize: "16px", fontWeight: "700", paddingLeft: "8px", paddingTop: "6px", top: "0px" }}><i style={{ fontSize: "14px", cursor: "pointer" }} class="fa-solid fa-arrow-left me-5"></i>Gündemler</h5>
-          <i style={{cursor: "pointer"}} class="fa-solid fa-gear pt-2"></i>
+        <div className='d-flex flex-row justify-content-between pe-1 position-sticky align-items-center' style={{ top: "0px", zIndex: "1", height: "34px", backgroundColor: "black" }}>
+          <h5 className='' style={{ fontSize: "16px", fontWeight: "700", paddingLeft: "8px", paddingTop: "1px" }}><i style={{ fontSize: "14px", cursor: "pointer" }} class="fa-solid fa-arrow-left me-5"></i>Gündemler</h5>
+          <i onClick={handleOpen} style={{ cursor: "pointer" }} class="fa-solid fa-gear"></i>
+          <Modal
+            open={open1}
+            onClose={handleClose1}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+              <Typography style={{padding: "4px 8px", fontSize: "16px"}} id="modal-modal-title" variant="h6" component="h2">
+              <i class="fa-solid fa-xmark me-4"></i> Gündemler
+              </Typography>
+              <Typography style={{marginTop: "20px", padding: "4px 8px"}} id="modal-modal-description" sx={{ mt: 2 }}>
+                Konum
+              </Typography>
+              <div style={{padding: "4px 8px"}} className='d-flex justify-content-between'>
+                İçeriği bu konumda göster
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="" width="10px"/>
+                </div>
+              </div>
+            </Box>
+          </Modal>
         </div>
-
         {
           topics.map((topic) => (
-            <div key={topic.id} style={{ position: "relative", padding: "6px 8px" }} className='d-flex mt-2 home-7'>
+            <div key={topic.id} style={{ position: "relative", padding: "3px 4px" }} className='d-flex mt-2 home-7'>
               <div className='d-flex flex-column'>
                 <span style={{ fontSize: "12px" }} className='text-secondary'>{topic.title}</span>
                 <span style={{ fontSize: "15px" }}>
