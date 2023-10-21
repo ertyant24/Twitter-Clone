@@ -71,9 +71,10 @@ function Agenda() {
                         </div> : ""
                     ))
                 }
-                <div onClick={() => {document.querySelector(".home-14").style.display = 'none'}} style={{ padding: "25px 15px", height: "50px", fontSize: "14px" }} className='home-7 d-flex align-items-center'>
-                    <Link to="/trends" className='text-decoration-none text-info'>Daha fazla göster</Link>
-                </div>
+                <Link to="/trends" onClick={() => {document.querySelector(".home-14").style.display = 'none'}} style={{ padding: "25px 15px", height: "50px", fontSize: "14px" }} className='home-7 d-flex align-items-center text-decoration-none text-info'>
+                    Daha fazla göster
+                    {/* <Link to="/trends" className='text-decoration-none text-info'>Daha fazla göster</Link> */}
+                </Link>
             </div>
         </>
     )

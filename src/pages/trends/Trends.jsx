@@ -13,11 +13,13 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 500,
   bgcolor: '#171717',
-  border: '1px solid #0a0a0a',
-  borderRadius: "10px",
+  border: '2px solid #0a0a0a',
+  borderRadius: "14px",
   boxShadow: 24,
+  p: 1,
+  height: 500
 };
 
 function Trends() {
@@ -48,9 +50,9 @@ function Trends() {
 
   return (
     <>
-      <div className='' style={{ backgroundColor: "rgb(1, 2, 2)", borderRadius: "16px", }}>
+      <div className='mb-4' style={{ backgroundColor: "rgb(1, 2, 2)", borderRadius: "16px", }}>
         <div className='d-flex flex-row justify-content-between pe-1 position-sticky align-items-center' style={{ top: "0px", zIndex: "1", height: "34px", backgroundColor: "black" }}>
-          <h5 className='' style={{ fontSize: "16px", fontWeight: "700", paddingLeft: "8px", paddingTop: "1px" }}><i style={{ fontSize: "14px", cursor: "pointer" }} class="fa-solid fa-arrow-left me-5"></i>Gündemler</h5>
+          <h5 className='' style={{ fontSize: "16px", fontWeight: "700", paddingLeft: "8px", paddingTop: "1px" }}><Link clasName='text-decoration-none' to="/"><i onClick={() => {document.querySelector(".home-14").style.display = 'block'}} style={{ fontSize: "14px", cursor: "pointer", marginRight: "34px" }} class="fa-solid fa-arrow-left text-white"></i></Link>Gündemler</h5>
           <i onClick={handleOpen} style={{ cursor: "pointer" }} class="fa-solid fa-gear"></i>
           <Modal
             open={open1}
@@ -60,17 +62,27 @@ function Trends() {
           >
             <Box sx={style}>
               <Typography style={{padding: "4px 8px", fontSize: "16px"}} id="modal-modal-title" variant="h6" component="h2">
-              <i class="fa-solid fa-xmark me-4"></i> Gündemler
+              <i style={{cursor: "pointer"}} onClick={handleClose1} class="fa-solid fa-xmark me-4"></i> Gündemler
               </Typography>
               <Typography style={{marginTop: "20px", padding: "4px 8px"}} id="modal-modal-description" sx={{ mt: 2 }}>
                 Konum
               </Typography>
-              <div style={{padding: "4px 8px"}} className='d-flex justify-content-between'>
+              <div style={{padding: "4px 8px", marginTop: "20px"}} className='d-flex justify-content-between'>
                 İçeriği bu konumda göster
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="" width="10px"/>
                 </div>
               </div>
+              <p className='text-secondary ps-2' style={{fontSize: "12px", marginTop: "-6px"}}>Bu özellik etkin olduğunda, şu anda etrafında olup bitenleri görürsün.</p>
+              <hr />
+              <div className='ps-2'>Kişiselleştirme</div>
+              <div style={{padding: "4px 8px", marginTop: "20px"}} className='d-flex justify-content-between'>
+                İçeriği bu konumda göster
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="" width="10px"/>
+                </div>
+              </div>
+              <p className='text-secondary ps-2' style={{fontSize: "12px", marginTop: "-6px"}}>Bu özellik etkin olduğunda, şu anda etrafında olup bitenleri görürsün.</p>
             </Box>
           </Modal>
         </div>
@@ -114,9 +126,6 @@ function Trends() {
             </div>
           ))
         }
-        <div style={{ padding: "25px 15px", height: "50px", fontSize: "14px" }} className='home-7 d-flex align-items-center'>
-          <Link to="/trends" className='text-decoration-none text-info'>Daha fazla göster</Link>
-        </div>
       </div>
     </>
   )

@@ -24,7 +24,10 @@ function Menu() {
                     <div className='pb-1'>
                         <Logo />
                     </div>
-                    <li className={`nav-item ${item === 0 ? "active" : ""}`} onClick={() => { active(0) }}>
+                    <li className={`nav-item ${item === 0 ? "active" : ""}`} onClick={() => { 
+                        active(0)
+                        document.querySelector(".home-14").style.display = 'block'
+                        }}>
                         <Link to="/" className="nav-link" href="#">
                             <div className='home' style={{ width: "150px" }}>
                                 <span className={`${not === 0 ? "" : "isaret"} rounded-circle`}></span>
