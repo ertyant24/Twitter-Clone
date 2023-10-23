@@ -27,12 +27,12 @@ function Followers() {
 
     return (
         <>
-            <div className='mt-3 mb-3' style={{ backgroundColor: "rgb(22, 24, 28)", borderRadius: "16px",}}>
+            <div id='home-17' className='mt-3 mb-3' style={{ backgroundColor: "rgb(22, 24, 28)", borderRadius: "16px",}}>
                 <h5 style={{ padding: "10px 18px" }}>Kimi takip etmeli</h5>
                 {
                     followers.map(follower => (
-
-                        <UserCard follower={follower} key={follower.username}/>
+                        follower.id <= 3 ?
+                        <UserCard follower={follower} key={follower.id}/> : ""
 
                         // <div key={follower.username} style={{ padding: "1px 15px", fontSize: "13px" }} className='d-flex mt-3 home-7 position-relative'>
                         //     <div>
@@ -55,9 +55,10 @@ function Followers() {
                         // </div>
                     ))
                 }
-                <div style={{ padding: "25px 15px", height: "50px", fontSize: "14px" }} className='home-7 d-flex align-items-center'>
-                    <Link className='text-decoration-none text-info'>Daha fazla göster</Link>
-                </div>
+                <Link onClick={() => {document.getElementById('home-17').style.display = 'none'}} to="/users" style={{ padding: "25px 15px", height: "50px", fontSize: "14px" }} className='home-7 d-flex align-items-center text-decoration-none text-info'>
+                    Daha fazla göster
+                    {/* <Link className='text-decoration-none text-info'>Daha fazla göster</Link> */}
+                </Link>
             </div>
         </>
     )

@@ -13,6 +13,7 @@ import Profile from "../pages/profile/Profile";
 import Bookmarks from "../pages/bookmarks/Bookmarks";
 import store from "../store";
 import Trends from "../pages/trends/Trends";
+import Users from "../pages/users/Users";
 
 const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: "trends",
                 element: <Trends />
+            },
+            {
+                path: "users",
+                element: <Users></Users>
             }
         ]
     },
