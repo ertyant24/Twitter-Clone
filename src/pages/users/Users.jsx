@@ -33,10 +33,10 @@ function Users() {
                     <i className="fa-solid fa-gear"></i>
                 </div>
             </div>
-            <div className='d-flex flex-row justify-content-around mt-4 mb-3'>
-                <div onClick={underLine1} style={{backgroundColor: "#010101", cursor: "pointer"}} className='d-flex flex-column position-relative'>Kimi takip etmeli{underline1 ? <span style={{width: "120px", height: "4px", backgroundColor: "#3dd5f3", position: "absolute", top: "36px", borderRadius: "8px"}}></span> : ""}</div>
+            <div className='d-flex flex-row justify-content-evenly mb-3 position-relative'>
+                <div onClick={underLine1} style={{cursor: "pointer", width: "240px", height: "50px", borderRadius: "6px", top: "16px"}} className='d-flex flex-column position-relative home-15 justify-content-center ps-5'>Kimi takip etmeli{underline1 ? <span style={{width: "120px", height: "4px", backgroundColor: "#3dd5f3", position: "absolute", top: "46px", borderRadius: "8px"}}></span> : ""}</div>
                 
-                <div style={{cursor: "pointer"}} className='position-relative' onClick={underLine2}>İlgini çekebilecek içerik üreticileri{underline2 ? <span style={{width: "231px", height: "4px", backgroundColor: "#3dd5f3", position: "absolute", top: "36px", left: "0px", borderRadius: "8px"}}></span> : ""}</div>
+                <div style={{cursor: "pointer", width: "260px", height: "50px", borderRadius: "6px", top: "16px", marginRight: "20px"}} className='position-relative home-15 d-flex align-items-center justify-content-center' onClick={underLine2}>İlgini çekebilecek içerik üreticileri{underline2 ? <span style={{width: "231px", height: "4px", backgroundColor: "#3dd5f3", position: "absolute", top: "46px", left: "15px", borderRadius: "8px"}}></span> : ""}</div>
             </div><hr />
             <div style={{padding: "2px 10px", fontSize: "18px"}} className='fw-semibold mb-3'>
                 Sizin için önerilenler

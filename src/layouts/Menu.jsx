@@ -27,6 +27,7 @@ function Menu() {
                     <li className={`nav-item ${item === 0 ? "active" : ""}`} onClick={() => { 
                         active(0)
                         document.querySelector(".home-14").style.display = 'block'
+                        document.getElementById('home-17').style.display = 'block'
                         }}>
                         <Link to="/" className="nav-link" href="#">
                             <div className='home' style={{ width: "150px" }}>
